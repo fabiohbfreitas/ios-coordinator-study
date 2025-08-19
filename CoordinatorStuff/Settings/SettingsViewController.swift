@@ -39,6 +39,7 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func handleInspectTouch() {
-        print(coordinator?.navigationController.viewControllers ?? "<>")
+        guard let controllers = coordinator?.navigationController.viewControllers.compactMap({ String(describing: $0) }).joined(separator: ", ") else { return }
+        logger.info("\(controllers)")
     }
 }

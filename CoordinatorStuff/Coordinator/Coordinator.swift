@@ -24,7 +24,7 @@ extension Coordinator {
     }
     
     func replaceCurrentCoordinator(with coordinator: Coordinator) {
-        print("Replacing \(String(describing: self)) with \(String(describing: coordinator))")
+        logger.info("Replacing \(String(describing: self)) with \(String(describing: coordinator))")
         parentCoordinator?.childCoordinators.append(coordinator)
         coordinator.parentCoordinator = parentCoordinator
         parentCoordinator?.childDidFinish(self)

@@ -19,7 +19,7 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        print("Started \(String(describing: self))")
+        logger.info("Started \(String(describing: self))")
         let home = HomeViewController()
         home.navigationItem.title = "Home"
         home.coordinator = self
@@ -39,7 +39,7 @@ final class HomeCoordinator: Coordinator {
     }
     
     deinit {
-        print("Finished \(String(describing: self))")
+        logger.info("Finished \(String(describing: self))")
     }
 }
 

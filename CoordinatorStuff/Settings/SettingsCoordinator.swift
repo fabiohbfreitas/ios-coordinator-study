@@ -18,7 +18,7 @@ final class SettingsCoordinator: Coordinator {
     }
     
     func start() {
-        print("Started \(String(describing: self))")
+        logger.info("Started \(String(describing: self))")
         let settings = SettingsViewController()
         settings.navigationItem.title = "Settings"
         settings.coordinator = self
@@ -26,7 +26,7 @@ final class SettingsCoordinator: Coordinator {
     }
     
     deinit {
-        print("Finished \(String(describing: self))")
+        logger.info("Finished \(String(describing: self))")
     }
 }
 

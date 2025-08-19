@@ -21,7 +21,7 @@ final class LoginCoordinator: Coordinator {
     lazy var loginViewController = LoginViewController()
     
     func start() {
-        print("Started \(String(describing: self))")
+        logger.info("Started \(String(describing: self))")
         loginViewController.coordinator = self
         loginViewController.navigationItem.title = "Login"
         navigationController.setViewControllers([loginViewController], animated: true)
@@ -39,6 +39,6 @@ final class LoginCoordinator: Coordinator {
     }
 
     deinit {
-        print("Finished \(String(describing: self))")
+        logger.info("Finished \(String(describing: self))")
     }
 }

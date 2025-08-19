@@ -22,7 +22,7 @@ final class RootCoordinator: Coordinator {
     }
     
     func start() {
-        print("Started \(String(describing: self))")
+        logger.info("Started \(String(describing: self))")
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         

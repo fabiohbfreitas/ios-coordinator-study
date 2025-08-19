@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import OSLog
+
+let logger = Logger(subsystem: "fabiofreitas.CoordinatorStuff", category: "main")
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
